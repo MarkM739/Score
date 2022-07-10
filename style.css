@@ -1,0 +1,33 @@
+.header1 {
+    text-align: center;
+    color: brown;
+    font-size: larger;
+}
+
+.header2 {
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid rgb(250, 250, 250);
+    border-collapse: collapse;
+    font-size: 44px;
+    
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backg {
+    background-image: url(../Score/Images/TerraNP.jpg);
+    background-repeat: no-repeat;
+    background-size: auto cover;
+    
+}
+
+body {
+    font: white;
+}
+
