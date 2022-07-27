@@ -8,6 +8,23 @@
     text-align: center;
 }
 
+.header11 {
+    text-align: center;
+    color: rgb(5, 5, 5);
+    font-size: 35px;
+}
+
+.header12 {
+    text-align: left;
+    color: darkgreen;
+    font-size: 35px;
+}
+
+.p1 {
+    text-align: left;
+    padding-right: 990px;
+}
+
 table, th, td {
     border: 1px solid rgb(250, 250, 250);
     border-collapse: collapse;
@@ -25,6 +42,12 @@ table, th, td {
     background-repeat: no-repeat;
     background-size: auto cover;
     
+}
+
+.backg1 {
+    background-color: beige;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
