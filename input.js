@@ -1,15 +1,11 @@
 
 
-document.getElementById("btn1").onclick = function(){
+ function getScore(){
+    let n = document.getElementById("myScore").value;
+    document.getElementById("display").innerHTML = n;
+ }
 
-    var myScore = document.getElementById("myScore").value;
-    console.log("Nice",myScore);
-    
+ document.getElementById("btn1").addEventListener("click", getScore);
 
-}
-
-button.onclick = function click() {
-    console.log('Button clicked');
-
-}
-
+const matrix = new Array(18).fill(0).map(() => new Array(4).fill(0));
+console.log(matrix[0][0]);
