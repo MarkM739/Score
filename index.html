@@ -32,8 +32,10 @@
         <div class="input">Hole 16: <input id="H16" type="text" placeholder="Hole 16"></div>
         <div class="input">Hole 17: <input id="H17" type="text" placeholder="Hole 17"></div>
         <div class="input">Hole 18: <input id="H18" type="text" placeholder="Hole 18"></div>
-
-        <button onclick="displayDetails()" id="entry">Input entry</button>
+    <form id="entry">
+        <button type="submit">Enter </button>
+    </form>
+       
     </div>
 
     <table id="display">
@@ -60,16 +62,9 @@
          </tr>
     </table>
 </div>
-
-
-
-    
-    
-
-
-    <script src="input.js"></script>
-    <script>alert("Welcome to the online Golf Scorecard\nPlay Well!")</script>
-   
+    <script src="input.js">
+        console.log(localStorage); 
+    </script>
 </body>
 
 
