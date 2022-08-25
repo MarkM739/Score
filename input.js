@@ -41,7 +41,29 @@ function displayDetails() {
                 console.log(hole)
          }
 
- // Local storage, drop down selector, define cell IDs. (Set attribute)
+
+         const storageInput = document.querySelector('.storage');
+         const text = document.querySelector('.text');
+         const button = document.querySelector('.submit');
+         const storedInput = localStorage.getItem('textinput');
+
+         if(storedInput) {
+            text.textContent = storedInput
+         }
+
+         storageInput.addEventListener('input', letter => {
+            text.textContent = letter.target.value
+
+         })
+
+         const saveToLocalStorage = () => {
+            localStorage.setItem('textinput', text.textContent)
+         }
+
+         button.addEventListener('click', saveToLocalStorage)
+
+
+ //  define cell IDs. (Set attribute)
   
     
   }
