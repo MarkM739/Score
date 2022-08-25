@@ -20,10 +20,15 @@ function displayDetails() {
 
    var display = document.getElementById("display");
 
+   let localTeamScores = JSON.parse(localStorage.getItem('localTeamScores')) || []
    for (let Team = 0; Team < teamScores.length; Team++) {
       var newRow = display.insertRow(row);
          console.log(Team)
-  
+
+      
+      console.log({localTeamScores})
+      let currentTeamScores = []
+
       for (let index = 0; index < 19; index++) {
          if (index==0) {
             var Name = document.getElementById("Team").value;
@@ -32,6 +37,10 @@ function displayDetails() {
             cell.innerHTML = Name
                console.log(Name)
 
+            // 
+            currentTeamScores[index] = Name
+               
+
             }
          else {
             var hole = document.getElementById(`H${index}`).value
@@ -39,34 +48,18 @@ function displayDetails() {
             var cell =newRow.insertCell(index);
             cell.innerHTML = hole
                 console.log(hole)
+            // data[`H${index}`] = hole
+
+            currentTeamScores[index] = hole
+               
          }
-
-
-         const storageInput = document.querySelector('.storage');
-         const text = document.querySelector('.text');
-         const button = document.querySelector('.submit');
-         const storedInput = localStorage.getItem('textinput');
-
-         if(storedInput) {
-            text.textContent = storedInput
-         }
-
-         storageInput.addEventListener('input', letter => {
-            text.textContent = letter.target.value
-
-         })
-
-         const saveToLocalStorage = () => {
-            localStorage.setItem('textinput', text.textContent)
-         }
-
-         button.addEventListener('click', saveToLocalStorage)
-
 
  //  define cell IDs. (Set attribute)
   
     
-  }
+      }
+  localTeamScores.push(currentTeamScores)
+  localStorage.setItem('localTeamScores', JSON.stringify(localTeamScores))
   }
       
 
@@ -74,51 +67,12 @@ function displayDetails() {
    
 }
 
-
-
-
-// var display = document.getElementById("display"); 
-
-// var newRow = display.insertRow(row);
-
-// var cell1 =newRow.insertCell(0);
-// var cell2 =newRow.insertCell(1);
-// var cell3 =newRow.insertCell(2);
-// var cell4 =newRow.insertCell(3);
-// var cell5 =newRow.insertCell(4);
-// var cell6 =newRow.insertCell(5);
-// var cell7 =newRow.insertCell(6);
-// var cell8 =newRow.insertCell(7);
-// var cell9 =newRow.insertCell(8);
-// var cell10 =newRow.insertCell(9);
-// var cell11 =newRow.insertCell(10);
-// var cell12 =newRow.insertCell(11);  
-// var cell13 =newRow.insertCell(12);
-// var cell14 =newRow.insertCell(13);
-// var cell15 =newRow.insertCell(14);
-// var cell16 =newRow.insertCell(15);
-// var cell17 =newRow.insertCell(16);
-// var cell18 =newRow.insertCell(17);
-
-// cell1.innerHTML = Team;
-// cell2.innerHTML = H1;
-// cell3.innerHTML = H2;
-// cell3.innerHTML = H3;
-// cell4.innerHTML = H4;
-// cell5.innerHTML = H5;
-// cell6.innerHTML = H6;
-// cell7.innerHTML = H7;
-// cell8.innerHTML = H8;
-// cell9.innerHTML = H9;
-// cell10.innerHTML = H10;
-// cell11.innerHTML = H11;
-// cell12.innerHTML = H12;
-// cell13.innerHTML = H13;
-// cell14.innerHTML = H14;
-// cell15.innerHTML = H15;
-// cell16.innerHTML = H16;
-// cell17.innerHTML = H17;
-// cell18.innerHTML = H18;
-
-// row++;
+// TODO
+/*
+*  Define cell IDs with setAttribute
+*  Accommodate existing data and populate table if any exists  
+*  Preventing duplicate teams
+*  Dropdown to select teams
+*  Editing current teams (last thing to do)
+*/
 
