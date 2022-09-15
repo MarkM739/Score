@@ -1,11 +1,18 @@
 var entry = document.getElementById("entry").click();
+const scoreInput = document.querySelector("#scoreInput");
 const form = document.querySelector("#entry");
 
-form.addEventListener('submit', e => {
-      console.log("patatoes");
-        e.preventDefault();
-        displayDetails();
+
         
+
+
+scoreInput.addEventListener('submit', e => {
+   e.preventDefault();
+   console.log(e);
+   
+   
+    
+     
 })
 
 
@@ -50,7 +57,7 @@ function displayDetails() {
                 console.log(hole)
             // data[`H${index}`] = hole
 
-            currentTeamScores[index] = hole
+                  currentTeamScores[index] = hole
                
          }
 
@@ -61,10 +68,7 @@ function displayDetails() {
   localTeamScores.push(currentTeamScores)
   localStorage.setItem('localTeamScores', JSON.stringify(localTeamScores))
   }
-      
-
-
-   
+       
 }
 
 // TODO

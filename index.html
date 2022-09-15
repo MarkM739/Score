@@ -8,10 +8,36 @@
         <meta name="viewport" content="width=device-width, intial-scale=1.0">      <!--This should scale the view for mobile devices...check once live*-->
     <title>Golf Scoresheet</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
     
 </head>
 
 <body>
+    <div class="container postion-relative">
+    <div class="card postion-absolute start-50 translate-middle" style="width: 18rem; margin-top: 280px;">
+        <div class="card-body">
+            <form id = "scoreInput">
+          <h5 class="card-title">Enter Your Score</h5>
+          <select name = "teamName"class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <select name = "holeName" class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button type ="submit" class="btn btn-primary">Go somewhere</button>
+            </form>
+        </div>
+      </div>
+    </div>
     <div id="container">
         <div class="input">Team: <input id="Team" type="text" placeholder="Team name"></div>
         <div class="input">Hole 1: <input id="H1" type="text" placeholder="Hole 1"></div>
