@@ -1,4 +1,4 @@
-var entry = document.getElementById("entry").click();
+
 const scoreInput = document.querySelector("#scoreInput");
 const form = document.querySelector("#entry");
 
@@ -8,8 +8,17 @@ const form = document.querySelector("#entry");
 
 scoreInput.addEventListener('submit', e => {
    e.preventDefault();
-   console.log(e);
+   var hole = document.getElementById('hole').value;
+   var score = document.getElementById('score').value;
+   console.log({hole, score});
+   var cell = document.getElementById(hole);
+   console.log(cell.innerHTML)
+   cell.innerHTML = score
    
+let localPersonalScore = JSON.parse(localStorage.getItem('localPersonalScore')) || []
+   console.log(localPersonalScore);
+   localPersonalScore [Number(hole) -1] =score
+   localStorage.setItem('localPersonalScore', JSON.stringify(localPersonalScore));
    
     
      
