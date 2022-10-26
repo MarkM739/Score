@@ -11,6 +11,7 @@ As a person who has golfed in many recreational tournaments, It isn't always eas
 
 # Contact
 
-Mark Murphy - [I'm an inline-style link](https://www.linkedin.com/in/mark-murphy-42536222b/) markmurphy739@gmail.com
+Mark Murphy - [LinkedIN](https://www.linkedin.com/in/mark-murphy-42536222b/) [email](markmurphy739@gmail.com)
 
-Project link: [I'm an inline-style link](https://github.com/MarkM739/Score)
+Project link: [Live Golf Leaderboard](https://github.com/MarkM739/Score)
+
